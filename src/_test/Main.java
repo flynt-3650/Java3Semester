@@ -6,7 +6,7 @@
 package _test;
 
 class Main {
-    private static int rec(int[] arr, int target, int left, int right) {
+    private static int partition(int[] arr, int target, int left, int right) {
         int mid = (left + right) / 2;
 
         if (left > right)
@@ -15,16 +15,16 @@ class Main {
         if (arr[mid] == target) {
             return mid;
         } else if (arr[mid] < target) {
-            return rec(arr, target, mid + 1, right);
+            return partition(arr, target, mid + 1, right);
         } else {
-            return rec(arr, target, left, mid - 1);
+            return partition(arr, target, left, mid - 1);
         }
     }
 
     public static int binarySearch(int[] arr, int target) {
         int left = 0;
         int right = arr.length;
-        return rec(arr, target, left, right);
+        return partition(arr, target, left, right);
     }
 
     public static void main(String[] args) {
