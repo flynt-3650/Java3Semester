@@ -7,7 +7,7 @@ package _test;
 
 class Main {
     public static int binarySearch(int[] arr, int target) {
-
+        return 0;
     }
 
     public static void main(String[] args) {
