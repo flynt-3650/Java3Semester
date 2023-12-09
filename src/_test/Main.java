@@ -6,7 +6,16 @@
 package _test;
 
 class Main {
+    public static int binarySearch(int[] arr, int target) {
+
+    }
+
     public static void main(String[] args) {
-        System.out.println("HW");
+        int[] lst1 = new int[]{-1, 0, 3, 5, 9, 12};
+        int[] lst2 = new int[]{-1, 0, 3, 5, 9, 12};
+
+
+        System.out.println(binarySearch(lst1, 9));
+        System.out.println(binarySearch(lst2, 2));
     }
 }
