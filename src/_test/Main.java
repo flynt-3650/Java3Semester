@@ -5,6 +5,8 @@
 
 package _test;
 
+import org.jetbrains.annotations.NotNull;
+
 class Main {
     private static int partition(int[] arr, int target, int left, int right) {
         int mid = (left + right) / 2;
@@ -21,7 +23,7 @@ class Main {
         }
     }
 
-    public static int binarySearch(int[] arr, int target) {
+    public static int binarySearch(int @NotNull [] arr, int target) {
         int left = 0;
         int right = arr.length;
         return partition(arr, target, left, right);
