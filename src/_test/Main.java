@@ -6,8 +6,22 @@
 package _test;
 
 class Main {
-    public static int binarySearch(int[] arr, int target) {
+    private static int rec(int[] arr, int target, int left, int right) {
+        int mid = (left + right) / 2;
 
+        if (arr[mid] == target) {
+            return mid;
+        } else if (arr[mid] < target) {
+            return rec(arr, target, mid, right);
+        } else {
+            return rec(arr, target, left, mid);
+        }
+    }
+
+    public static int binarySearch(int[] arr, int target) {
+        int left = 0;
+        int right = arr.length;
+        return rec(arr, target, left, right);
     }
 
     public static void main(String[] args) {
